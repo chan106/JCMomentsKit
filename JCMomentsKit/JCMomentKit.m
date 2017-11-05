@@ -20,6 +20,8 @@
     //添加测试代码
     //添加测试 2017-11-05
     //121212
+    //1.0.2
+    
 }
 
 - (void)didReceiveMemoryWarning {
