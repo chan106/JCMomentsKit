@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JCMomentKit : UIViewController
+@interface JCMomentsKit : UIViewController
 
 +(UIViewController *)creatVC;
 

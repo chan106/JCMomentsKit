@@ -6,16 +6,16 @@
 //  Copyright © 2017年 Guo.JC. All rights reserved.
 //
 
-#import "JCMomentKit.h"
+#import "JCMomentsKit.h"
 
-@interface  JCMomentKit()
+@interface  JCMomentsKit()
 @property (weak, nonatomic) IBOutlet UISwitch *switchButton;
 @property (weak, nonatomic) IBOutlet UISlider *sliderBurron;
 @property (weak, nonatomic) IBOutlet UIView *vv;
 
 @end
 
-@implementation JCMomentKit
+@implementation JCMomentsKit
 - (IBAction)slidAction:(UISlider *)sender {
     _vv.alpha = sender.value;
 }
@@ -24,12 +24,12 @@
 }
 
 + (UIViewController *)creatVC{
-    UIViewController *vc = [[UIStoryboard storyboardWithName:@"JCMomentKit" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"JCMomentKit"];
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"JCMomentsKit" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"JCMomentsKit"];
     return vc;
 }
 
 - (IBAction)pushVC:(UIButton *)sender {
-    [self presentViewController:[JCMomentKit creatVC] animated:YES completion:nil];
+    [self presentViewController:[JCMomentsKit creatVC] animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
