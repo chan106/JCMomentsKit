@@ -1,42 +1,47 @@
 //
-//  JCMomentKit.m
-//  JCMomentsKit
+//  ViewController.m
+//  StoryBoardTest
 //
-//  Created by 郭吉成 on 2017/11/5.
-//  Copyright © 2017年 KOOSPUR. All rights reserved.
+//  Created by Guo.JC on 2017/11/5.
+//  Copyright © 2017年 Guo.JC. All rights reserved.
 //
 
 #import "JCMomentKit.h"
 
-@interface JCMomentKit ()
+@interface  JCMomentKit()
+@property (weak, nonatomic) IBOutlet UISwitch *switchButton;
+@property (weak, nonatomic) IBOutlet UISlider *sliderBurron;
+@property (weak, nonatomic) IBOutlet UIView *vv;
 
 @end
 
 @implementation JCMomentKit
+- (IBAction)slidAction:(UISlider *)sender {
+    _vv.alpha = sender.value;
+}
+- (IBAction)close:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
++ (UIViewController *)creatVC{
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"JCMomentKit" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"JCMomentKit"];
+    return vc;
+}
+
+- (IBAction)pushVC:(UIButton *)sender {
+    [self presentViewController:[JCMomentKit creatVC] animated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    //添加测试代码
-    //添加测试 2017-11-05
-    //121212
-    //1.0.2
-    
+    // Do any additional setup after loading the view, typically from a nib.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

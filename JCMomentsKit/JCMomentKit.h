@@ -1,13 +1,16 @@
 //
-//  JCMomentKit.h
-//  JCMomentsKit
+//  ViewController.h
+//  StoryBoardTest
 //
-//  Created by 郭吉成 on 2017/11/5.
-//  Copyright © 2017年 KOOSPUR. All rights reserved.
+//  Created by Guo.JC on 2017/11/5.
+//  Copyright © 2017年 Guo.JC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface JCMomentKit : UIViewController
 
++(UIViewController *)creatVC;
+
 @end
+
